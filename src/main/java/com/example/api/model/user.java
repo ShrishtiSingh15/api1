@@ -10,7 +10,6 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "sample")
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -23,27 +22,27 @@ public class user {
 
     private String location;
 
-//    public int getSid() {
-//        return sid;
-//    }
-//
-//    public void setSid(int sid) {
-//        this.sid = sid;
-//    }
-//
-//    public String getSname() {
-//        return sname;
-//    }
-//
-//    public void setSname(String sname) {
-//        this.sname = sname;
-//    }
-//
-//    public String getLocation() {
-//        return location;
-//    }
-//
-//    public void setLocation(String location) {
-//        this.location = location;
-//    }
+    public int getSid() {
+        return sid;
+    }
+
+    public void setSid(int sid) {
+        this.sid = sid;
+    }
+
+    public String getSname() {
+        return sname;
+    }
+
+    public void setSname(String sname) {
+        this.sname = sname;
+    }
+
+    public String getLocation() {
+        return location;
+    }
+
+    public void setLocation(String location) {
+        this.location = location;
+    }
 }
