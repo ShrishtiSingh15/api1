@@ -18,10 +18,10 @@ public class usercontroller {
         return userservice.saveUser(User);
     }
 
-    @GetMapping("/users")
-    public List<user> fetchUserList()
+    @GetMapping("/users/{pageNo}/{pageSize}")
+    public List<user> fetchUserList(@PathVariable int pageNo, @PathVariable int pageSize)
     {
-        return userservice.fetchUserList();
+        return userservice.fetchUserList(pageNo, pageSize);
     }
 
     @PutMapping("/users/{id}")
