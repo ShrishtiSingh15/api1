@@ -1,52 +1,49 @@
 package com.example.api.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 
 @Entity
 @Table(name = "sample")
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class user {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int sid;
 
     private String sname;
 
-    private int salary;
+    private String location;
 
-    public user(){
-        super();
-    }
-    public user(int sid, String sname, int salary){
-        super();
-        this.sid = sid;
-        this.sname = sname;
-        this.salary = salary;
-    }
-
-    public int getId() {
-        return sid;
-    }
-
-    public void setId(int sid) {
-        this.sid = sid;
-    }
-
-    public String getSname() {
-        return sname;
-    }
-
-    public void setSname(String sname) {
-        this.sname = sname;
-    }
-
-    public int getSalary(int salary) {
-        return salary;
-    }
-
-    public void setSalary(int salary) {
-        this.salary = salary;
-    }
-
-
+//    public int getSid() {
+//        return sid;
+//    }
+//
+//    public void setSid(int sid) {
+//        this.sid = sid;
+//    }
+//
+//    public String getSname() {
+//        return sname;
+//    }
+//
+//    public void setSname(String sname) {
+//        this.sname = sname;
+//    }
+//
+//    public String getLocation() {
+//        return location;
+//    }
+//
+//    public void setLocation(String location) {
+//        this.location = location;
+//    }
 }
